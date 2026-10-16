@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title data-pt="Design System" data-en="Design System">Design System</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+
+<body>
+     <header class="barramenu">
+        <nav class="links">
+             <a href="../Home/index.html" data-pt="HOME" data-en="HOME">HOME</a>
+             <a href="../Resumo/Resumo.html" data-pt="RESUMO" data-en="RESUME">RESUMO</a>
+             <a href="../Contato/Contato.html" data-pt="CONTATOS" data-en="CONTACT">CONTATOS</a>
+             <a href="../Projetos/Projetos.html" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a>
+             <a href="design.html" class="ativo" data-pt="DESIGN SYSTEM" data-en="DESIGN SYSTEM">DESIGN SYSTEM</a>
+        </nav>
+
+        <!-- SELETOR DE IDIOMA -->
+        <div class="seletor-idioma" onclick="alternarIdioma()">
+            <svg class="icone-globo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.93 6h-3.15a15.7 15.7 0 0 0-1.57-4.11A8.04 8.04 0 0 1 19.93 8zM12 4.05c1.34 1.63 2.27 3.7 2.65 5.95H9.35c.38-2.25 1.31-4.32 2.65-5.95zM4.07 10h3.15c.16 1.44.54 2.84 1.09 4.11H4.37A8.04 8.04 0 0 1 4.07 10zm0 4h3.92c.55 1.27 1.25 2.48 2.09 3.59A15.7 15.7 0 0 1 4.07 14zm3.92-8h3.92C11.36 4.73 10.66 3.52 9.82 2.41A15.7 15.7 0 0 0 7.99 6zM12 19.95c-1.34-1.63-2.27-3.7-2.65-5.95h5.3c-.38 2.25-1.31 4.32-2.65 5.95zM14.9 14.11c.55-1.27.93-2.67 1.09-4.11h3.15a8.04 8.04 0 0 1-4.24 4.11zm0 2.29a15.7 15.7 0 0 1-2.09 3.59 15.7 15.7 0 0 1-2.09-3.59h4.18z"/>
+            </svg>
+            <span id="lang-pt" class="lang-opcao ativo">PT</span>
+            <span class="separador-lang">|</span>
+            <span id="lang-en" class="lang-opcao">EN</span>
+        </div>
+    </header>
+
+    <h1 data-pt="DESIGN SYSTEM" data-en="DESIGN SYSTEM">DESIGN SYSTEM</h1>
+    <p class="ds-subtitle" data-pt="Guia de estilos, cores, tipografia e componentes reutilizáveis que compõem a identidade visual deste portfólio." 
+       data-en="Style guide, colors, typography, and reusable components that make up the visual identity of this portfolio.">
+       Guia de estilos, cores, tipografia e componentes reutilizáveis que compõem a identidade visual deste portfólio.
+    </p>
+
+    <div class="ds-container">
+        
+        <!-- SEÇÃO 1: PALETA DE CORES -->
+        <section class="ds-secao">
+            <h2 data-pt="1. Paleta de Cores" data-en="1. Color Palette">1. Paleta de Cores</h2>
+            <div class="ds-cores-grid">
+                <div class="cor-card">
+                    <div class="cor-amostra" style="background-color: #0b0f13;"></div>
+                    <span class="cor-nome" data-pt="Fundo Principal" data-en="Main Background">Fundo Principal</span>
+                    <span class="cor-codigo">#0b0f13</span>
+                </div>
+                <div class="cor-card">
+                    <div class="cor-amostra" style="background-color: #1a232a;"></div>
+                    <span class="cor-nome" data-pt="Superfície / Cards" data-en="Surface / Cards">Superfície / Cards</span>
+                    <span class="cor-codigo">#1a232a</span>
+                </div>
+                <div class="cor-card">
+                    <div class="cor-amostra" style="background-color: #4ade80;"></div>
+                    <span class="cor-nome" data-pt="Verde Destaque" data-en="Accent Green">Verde Destaque</span>
+                    <span class="cor-codigo">#4ade80</span>
+                </div>
+                <div class="cor-card">
+                    <div class="cor-amostra" style="background-color: #ffffff;"></div>
+                    <span class="cor-nome" data-pt="Texto Principal" data-en="Main Text">Texto Principal</span>
+                    <span class="cor-codigo">#ffffff</span>
+                </div>
+                <div class="cor-card">
+                    <div class="cor-amostra" style="background-color: #cbd5e1;"></div>
+                    <span class="cor-nome" data-pt="Texto Secundário" data-en="Secondary Text">Texto Secundário</span>
+                    <span class="cor-codigo">#cbd5e1</span>
+                </div>
+            </div>
+        </section>
+
+       
+        <!-- SEÇÃO 2: TIPOGRAFIA -->
+        <section class="ds-secao">
+            <h2 data-pt="2. Tipografia & Fontes"
+                data-en="2. Typography & Fonts">
+                2. Tipografia & Fontes
+            </h2>
+
+            <div class="ds-tipografia-box">
+
+                <!-- H1 -->
+                <div class="tipo-item">
+                    <span class="tipo-label"
+                        data-pt="H1 - Títulos Principais"
+                        data-en="H1 - Main Headings">
+                        H1 - Títulos Principais
+                    </span>
+
+                    <span class="tipo-especs"
+                        data-pt="Fonte: sans-serif | Tamanho: 2.5rem (40px) | Peso: Negrito (700) | Cor: #4ade80"
+                        data-en="Font: sans-serif | Size: 2.5rem (40px) | Weight: Bold (700) | Color: #4ade80">
+                        Fonte: sans-serif | Tamanho: 2.5rem (40px) | Peso: Negrito (700) | Cor: #4ade80
+                    </span>
+
+                    <h1 class="tipo-exemplo-h1">Lívia Duarte Silva</h1>
+                </div>
+
+                <!-- H2 -->
+                <div class="tipo-item">
+                    <span class="tipo-label"
+                        data-pt="H2 - Seções / Modais"
+                        data-en="H2 - Sections / Modals">
+                        H2 - Seções / Modais
+                    </span>
+
+                    <span class="tipo-especs"
+                        data-pt="Fonte: sans-serif | Tamanho: 1.8rem (28px) | Peso: Negrito (700) | Cor: #4ade80"
+                        data-en="Font: sans-serif | Size: 1.8rem (28px) | Weight: Bold (700) | Color: #4ade80">
+                        Fonte: sans-serif | Tamanho: 1.8rem (28px) | Peso: Negrito (700) | Cor: #4ade80
+                    </span>
+
+                    <h2 class="tipo-exemplo-h2"
+                        data-pt="Design System & Projetos"
+                        data-en="Design System & Projects">
+                        Design System & Projetos
+                    </h2>
+                </div>
+
+                <!-- CORPO DE TEXTO -->
+                <div class="tipo-item tipo-item-body">
+                    <span class="tipo-label"
+                        data-pt="Corpo de Texto (Body / Parágrafos)"
+                        data-en="Body Text (Body / Paragraphs)">
+                        Corpo de Texto (Body / Parágrafos)
+                    </span>
+
+                    <span class="tipo-especs"
+                        data-pt="Fonte: sans-serif | Tamanho: 0.95rem - 1rem | Peso: Regular (400) | Cor: #cbd5e1 / #94a3b8"
+                        data-en="Font: sans-serif | Size: 0.95rem - 1rem | Weight: Regular (400) | Color: #cbd5e1 / #94a3b8">
+                        Fonte: sans-serif | Tamanho: 0.95rem - 1rem | Peso: Regular (400) | Cor: #cbd5e1 / #94a3b8
+                    </span>
+
+                    <p class="tipo-exemplo-p"
+                        data-pt="Estudante de Ciência da Computação na PUC Minas, desenvolvendo interfaces web responsivas, limpas e bilíngues."
+                        data-en="Computer Science student at PUC Minas, developing clean, responsive, bilingual web interfaces.">
+                        Estudante de Ciência da Computação na PUC Minas, desenvolvendo interfaces web responsivas, limpas e bilíngues.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEÇÃO 3: BOTÕES E COMPONENTES -->
+        <section class="ds-secao">
+            <h2 data-pt="3. Botões e Ações" data-en="3. Buttons & Actions">3. Botões e Ações</h2>
+            <div class="ds-botoes-grid">
+                <div class="botao-amostra">
+                    <span class="tipo-label" data-pt="Botão Principal" data-en="Primary Button">Botão Principal</span>
+                    <button class="ds-btn-primary" data-pt="Baixar Currículo" data-en="Download Resume">Baixar Currículo</button>
+                </div>
+                <div class="botao-amostra">
+                    <span class="tipo-label" data-pt="Botão Secundário" data-en="Secondary Button">Botão Secundário</span>
+                    <button class="ds-btn-secondary" data-pt="Abrir em Nova Aba" data-en="Open in New Tab">Abrir em Nova Aba</button>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Script Global de Tradução -->
+    <script src="../idioma.js"></script>
+</body>
+</html>

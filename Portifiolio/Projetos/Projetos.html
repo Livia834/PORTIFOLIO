@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title data-pt="Projetos" data-en="Projects">Projetos</title>
+    <link rel="stylesheet" href="Projetos.css">
+</head>
+
+<body>
+     <header class="barramenu">
+        <nav class="links">
+             <a href="../Home/index.html" data-pt="HOME" data-en="HOME">HOME</a>
+             <a href="../Resumo/Resumo.html" data-pt="RESUMO" data-en="RESUME">RESUMO</a>
+             <a href="../Contato/Contato.html" data-pt="CONTATOS" data-en="CONTACT">CONTATOS</a>
+             <a href="Projetos.html" class="ativo" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a>
+             <a href="../Design/Design.html" data-pt="DESIGN SYSTEM" data-en="DESIGN SYSTEM">DESIGN SYSTEM</a>
+        </nav>
+
+        <!-- SELETOR DE IDIOMA -->
+        <div class="seletor-idioma" onclick="alternarIdioma()">
+            <svg class="icone-globo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.93 6h-3.15a15.7 15.7 0 0 0-1.57-4.11A8.04 8.04 0 0 1 19.93 8zM12 4.05c1.34 1.63 2.27 3.7 2.65 5.95H9.35c.38-2.25 1.31-4.32 2.65-5.95zM4.07 10h3.15c.16 1.44.54 2.84 1.09 4.11H4.37A8.04 8.04 0 0 1 4.07 10zm0 4h3.92c.55 1.27 1.25 2.48 2.09 3.59A15.7 15.7 0 0 1 4.07 14zm3.92-8h3.92C11.36 4.73 10.66 3.52 9.82 2.41A15.7 15.7 0 0 0 7.99 6zM12 19.95c-1.34-1.63-2.27-3.7-2.65-5.95h5.3c-.38 2.25-1.31 4.32-2.65 5.95zM14.9 14.11c.55-1.27.93-2.67 1.09-4.11h3.15a8.04 8.04 0 0 1-4.24 4.11zm0 2.29a15.7 15.7 0 0 1-2.09 3.59 15.7 15.7 0 0 1-2.09-3.59h4.18z"/>
+            </svg>
+            <span id="lang-pt" class="lang-opcao ativo">PT</span>
+            <span class="separador-lang">|</span>
+            <span id="lang-en" class="lang-opcao">EN</span>
+        </div>
+    </header>
+
+    <h1 data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</h1>
+
+    <!-- LINHA DO TEMPO / GRADE DE PROJETOS -->
+    <div class="projetos-grid">
+
+        <!-- PROJETO 1: Página de Perfil -->
+        <div class="projeto-card" onclick="abrirModal('modal-perfil')">
+            <div class="projeto-img-container">
+                <img src="perfil.png" alt="Página de Perfil" class="projeto-img">
+            </div>
+            <div class="projeto-info">
+                <h3 data-pt="Página de Perfil" data-en="Profile Page">Página de Perfil</h3>
+                <p data-pt="Página web estática desenvolvida para estruturação e estilização de layout de perfil, contendo seções de apresentação pessoal e hobbies." 
+                   data-en="Static web page developed for structuring and styling a profile layout, featuring personal presentation sections and hobbies.">
+                   Página web estática desenvolvida para estruturação e estilização de layout de perfil, contendo seções de apresentação pessoal e hobbies.
+                </p>
+                <div class="projeto-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJETO 2: Vireo -->
+        <div class="projeto-card" onclick="abrirModal('modal-vireo')">
+            <div class="projeto-img-container">
+                <img src="vireo-catalogo.png" alt="Plataforma Vireo" class="projeto-img">
+            </div>
+            <div class="projeto-info">
+                <h3>Vireo - Doação e Troca</h3>
+                <p data-pt="Plataforma web para consulta de catálogo de biblioteca, visualização de detalhes de livros, gerenciamento de reservas e envio de propostas de troca." 
+                   data-en="Web platform for library catalog consultation, viewing book details, managing reservations, and sending exchange proposals.">
+                   Plataforma web para consulta de catálogo de biblioteca, visualização de detalhes de livros, gerenciamento de reservas e envio de propostas de troca.
+                </p>
+                <div class="projeto-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>JSON</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL DO PROJETO 1: PÁGINA DE PERFIL -->
+    <div id="modal-perfil" class="modal-overlay">
+        <div class="modal-conteudo">
+            <button class="modal-fechar" onclick="fecharModal('modal-perfil')">&times;</button>
+            <div class="modal-img-container">
+                <img src="perfil.png" alt="Página de Perfil" class="modal-img">
+            </div>
+            <h2 data-pt="Página de Perfil" data-en="Profile Page">Página de Perfil</h2>
+            <p data-pt="Projeto web estático focado em fundamentos de desenvolvimento web. A página apresenta informações de perfil estruturadas com HTML semântico e estilizadas com CSS, simulando um cartão de apresentação pessoal com links acadêmicos e seções de interesses."
+               data-en="Static web project focused on web development fundamentals. The page features profile information structured with semantic HTML and styled with CSS, simulating a personal presentation card with academic links and interest sections.">
+               Projeto web estático focado em fundamentos de desenvolvimento web. A página apresenta informações de perfil estruturadas com HTML semântico e estilizadas com CSS, simulando um cartão de apresentação pessoal com links acadêmicos e seções de interesses.
+            </p>
+            <div class="modal-botoes">
+                <a href="https://github.com/Livia834/DIW---Pagina-de-Perfil.git" target="_blank" class="btn-acao github" data-pt="Repositório no GitHub" data-en="GitHub Repository">Repositório no GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DO PROJETO 2: VIREO (COM CARROSSEL DE SETINHAS) -->
+    <div id="modal-vireo" class="modal-overlay">
+        <div class="modal-conteudo">
+            <button class="modal-fechar" onclick="fecharModal('modal-vireo')">&times;</button>
+            
+            <!-- Carrossel de Imagens -->
+            <div class="carrossel-container">
+                <button class="carrossel-btn prev" onclick="mudarSlide(-1)">&#10094;</button>
+                <div class="modal-img-container">
+                    <img src="vireo-catalogo.png" alt="Catálogo Vireo" class="modal-img slide-vireo active-slide">
+                    <img src="vireo-detalhes.png" alt="Detalhes Vireo" class="modal-img slide-vireo">
+                    <img src="vireo-historico.png" alt="Histórico Vireo" class="modal-img slide-vireo">
+                </div>
+                <button class="carrossel-btn next" onclick="mudarSlide(1)">&#10095;</button>
+            </div>
+
+            <h2>Vireo - Doação, Compra e Troca</h2>
+            <p data-pt="Trabalho Interdisciplinar desenvolvido para a PUC Minas. O Vireo conecta alunos para doação, reserva e troca de livros e materiais escolares. O sistema conta com catálogo interativo, página de detalhes dos itens, formulários de proposta de troca e um painel de histórico completo para acompanhar reservas e solicitações."
+               data-en="Interdisciplinary project developed for PUC Minas. Vireo connects students for donation, reservation, and exchange of books and school supplies. The system features an interactive catalog, item details page, exchange proposal forms, and a complete history panel to track reservations and requests.">
+               Trabalho Interdisciplinar desenvolvido para a PUC Minas. O Vireo conecta alunos para doação, reserva e troca de livros e materiais escolares. O sistema conta com catálogo interativo, página de detalhes dos itens, formulários de proposta de troca e um painel de histórico completo para acompanhar reservas e solicitações.
+            </p>
+            <div class="modal-botoes">
+                <a href="https://github.com/Livia834/TI2---Vireo.git" target="_blank" class="btn-acao github" data-pt="Repositório no GitHub" data-en="GitHub Repository">Repositório no GitHub</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts de Controle (Modais e Carrossel) -->
+    <script>
+        function abrirModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function fecharModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal-overlay')) {
+                event.target.style.display = 'none';
+            }
+        }
+
+        // Lógica do Carrossel de Imagens do Vireo
+        let slideAtual = 0;
+        function mudarSlide(direcao) {
+            const slides = document.querySelectorAll('.slide-vireo');
+            slides[slideAtual].classList.remove('active-slide');
+            
+            slideAtual += direcao;
+            if (slideAtual >= slides.length) {
+                slideAtual = 0;
+            } else if (slideAtual < 0) {
+                slideAtual = slides.length - 1;
+            }
+            
+            slides[slideAtual].classList.add('active-slide');
+        }
+    </script>
+
+    <!-- Script Global de Tradução -->
+    <script src="../idioma.js"></script>
+</body>
+</html>
