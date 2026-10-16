@@ -1,0 +1,363 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0;
+    background-color: #0b0f13; 
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+/* Barra de menu de ponta a ponta */
+.barramenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #1a232a;
+    border-bottom: 2px solid #2e3c48;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.barramenu::before {
+    content: "";
+    width: 75px;
+}
+
+.links {
+    display: flex;
+    gap: 30px; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.links a {
+    color: #cbd5e1;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.links a.ativo {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 4px 0;
+    border-radius: 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.links a.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4ade80; 
+}
+
+.links a:hover {
+    color: #ffffff;
+}
+
+/* Seletor de Idioma */
+.seletor-idioma {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 6px 10px;
+    width: 75px;
+    justify-content: flex-end;
+    transition: opacity 0.2s ease;
+}
+
+.seletor-idioma:hover {
+    opacity: 0.85;
+}
+
+.icone-globo {
+    width: 18px;
+    height: 18px;
+    fill: #4ade80;
+}
+
+.lang-opcao {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #475569; 
+    transition: color 0.2s ease;
+}
+
+.separador-lang {
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+.lang-opcao.ativo {
+    color: #4ade80;
+}
+
+/* Título da Página */
+h1 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: #4ade80;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Grade de Projetos */
+.projetos-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1000px;
+    width: 90%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/* Card Individual do Projeto */
+.projeto-card {
+    background-color: #1a232a;
+    border: 1px solid #2e3c48;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 450px;
+    cursor: pointer;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    border-color: #4ade80;
+    box-shadow: 0 10px 25px rgba(74, 222, 128, 0.15);
+}
+
+.projeto-img-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #0f172a;
+}
+
+.projeto-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.projeto-card:hover .projeto-img {
+    transform: scale(1.03);
+}
+
+.projeto-info {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.projeto-info h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 1.4rem;
+}
+
+.projeto-info p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex: 1;
+}
+
+/* Tags de Tecnologias */
+.projeto-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.projeto-tags span {
+    background-color: #0f172a;
+    color: #4ade80;
+    border: 1px solid #334155;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+/* ESTILO DO MODAL */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-conteudo {
+    background-color: #1a232a;
+    border: 1px solid #4ade80;
+    border-radius: 14px;
+    max-width: 700px;
+    width: 100%;
+    padding: 35px 30px 30px 30px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: #cbd5e1;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    z-index: 20;
+}
+
+.modal-fechar:hover {
+    color: #4ade80;
+}
+
+/* ESTILO DO CARROSSEL DE IMAGENS */
+.carrossel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.modal-img-container {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #0b0f13;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #2e3c48;
+}
+
+.modal-img,
+.modal-img.slide-vireo {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    display: none; 
+}
+
+.modal-img.active-slide,
+#modal-perfil .modal-img {
+    display: block; 
+}
+
+/* Botões de seta do carrossel */
+.carrossel-btn {
+    background-color: #0f172a;
+    color: #4ade80;
+    border: 1px solid #334155;
+    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 15;
+    position: absolute;
+    transition: all 0.2s ease;
+}
+
+.carrossel-btn:hover {
+    background-color: #4ade80;
+    color: #03060b;
+    border-color: #4ade80;
+}
+
+.carrossel-btn.prev {
+    left: 10px;
+}
+
+.carrossel-btn.next {
+    right: 10px;
+}
+
+.modal-conteudo h2 {
+    color: #4ade80;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.modal-conteudo p {
+    color: #cbd5e1;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+}
+
+.modal-botoes {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-acao.github {
+    background-color: #4ade80;
+    color: #03060b;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-acao.github:hover {
+    background-color: #22c55e;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 768px) {
+    .projetos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .projeto-card {
+        width: 100%;
+    }
+}

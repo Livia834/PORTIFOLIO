@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Contato</title>
+    <link rel="stylesheet" href="Contato.css">
+</head>
+
+<body>
+     <header class="barramenu">
+        <nav class="links">
+             <a href="../Home/index.html" data-pt="HOME" data-en="HOME">HOME</a>
+             <a href="../Resumo/Resumo.html" data-pt="RESUMO" data-en="RESUME">RESUMO</a>
+             <a href="Contato.html" class="ativo" data-pt="CONTATOS" data-en="CONTACT">CONTATOS</a>
+             <a href="../Projetos/Projetos.html" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a>
+             <a href="../Design/Design.html" data-pt="DESIGN SYSTEM" data-en="DESIGN SYSTEM">DESIGN SYSTEM</a>
+        </nav>
+
+        <!-- SELETOR DE IDIOMA -->
+        <div class="seletor-idioma" onclick="alternarIdioma()">
+            <svg class="icone-globo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.93 6h-3.15a15.7 15.7 0 0 0-1.57-4.11A8.04 8.04 0 0 1 19.93 8zM12 4.05c1.34 1.63 2.27 3.7 2.65 5.95H9.35c.38-2.25 1.31-4.32 2.65-5.95zM4.07 10h3.15c.16 1.44.54 2.84 1.09 4.11H4.37A8.04 8.04 0 0 1 4.07 10zm0 4h3.92c.55 1.27 1.25 2.48 2.09 3.59A15.7 15.7 0 0 1 4.07 14zm3.92-8h3.92C11.36 4.73 10.66 3.52 9.82 2.41A15.7 15.7 0 0 0 7.99 6zM12 19.95c-1.34-1.63-2.27-3.7-2.65-5.95h5.3c-.38 2.25-1.31 4.32-2.65 5.95zM14.9 14.11c.55-1.27.93-2.67 1.09-4.11h3.15a8.04 8.04 0 0 1-4.24 4.11zm0 2.29a15.7 15.7 0 0 1-2.09 3.59 15.7 15.7 0 0 1-2.09-3.59h4.18z"/>
+            </svg>
+            <span id="lang-pt" class="lang-opcao ativo">PT</span>
+            <span class="separador-lang">|</span>
+            <span id="lang-en" class="lang-opcao">EN</span>
+        </div>
+    </header>
+
+    <h1 data-pt="Contatos" data-en="Contact">Contatos</h1>
+
+    <!-- Caixa Principal Escura que engloba TUDO -->
+    <div class="contact-container">
+        
+        <!-- Secção dos contactos directos -->
+        <div class="secao-contatos">
+            <div class="whatsapp-container">
+                <img src="whatsapp.png" class="imagem-aplicativo" alt="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=5537991923225" target="_blank" class="whatsapp-texto">(37) 99192-3225</a>
+            </div>
+
+            <div class="email-container">
+                <img src="gmail.png" class="imagem-aplicativo" alt="gmail">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=liviadsilva2007@gmail.com" target="_blank" class="email-texto">liviadsilva2007@gmail.com</a>
+            </div>
+
+            <div class="github-container">
+                <img src="GitHub.png" class="imagem-aplicativo" alt="GitHub">
+                <a href="https://github.com/Livia834" target="_blank" class="github-texto">Livia Duarte Silva</a>
+            </div>
+            
+            <div class="linkedin-container">
+                <img src="linkedin.png" class="imagem-aplicativo" alt="linkedin">
+                <a href= "https://www.linkedin.com/in/livia-silva-3525232b6/" target="_blank" class="linkedin-texto">Livia Silva</a>
+            </div>
+        </div>
+
+      <div class="secao-formulario">
+            <h2 data-pt="Entre em Contato" data-en="Get in Touch">Entre em Contato</h2>
+            <p class="subtitle" data-pt="Sinta-se à vontade para se conectar ou me enviar uma mensagem." data-en="Feel free to connect or send me a message.">Sinta-se à vontade para se conectar ou me enviar uma mensagem.</p>
+
+           <form id="contact-form">
+    <div class="input-group">
+        <input type="text" name="from_name" placeholder="Seu nome" data-pt-placeholder="Seu nome" data-en-placeholder="Your name" required>
+    </div>
+
+    <div class="input-group">
+        <input type="email" name="from_email" placeholder="seu@email.com" data-pt-placeholder="seu@email.com" data-en-placeholder="your@email.com" required>
+    </div>
+
+    <div class="input-group">
+        <textarea name="message" rows="5" placeholder="Sua mensagem..." data-pt-placeholder="Sua mensagem..." data-en-placeholder="Your message..." required></textarea>
+    </div>
+
+    <button type="submit" id="button" data-pt="Enviar" data-en="Send">Enviar</button>
+</form>
+        </div>
+    </div>
+
+    <!-- Notificação flutuante (Toast) -->
+    <div id="toast" class="toast hidden" data-pt-sucesso="Mensagem enviada com sucesso! Responderei em breve..." data-en-sucesso="Message sent successfully! I'll reply soon...">Mensagem enviada com sucesso!</div>
+
+    <!-- SDK do EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="Contato.js"></script>
+    <!-- Script Global de Tradução -->
+    <script src="../idioma.js"></script>
+</body>
+</html>

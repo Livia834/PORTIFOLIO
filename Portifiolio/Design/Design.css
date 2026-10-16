@@ -1,0 +1,298 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0;
+    background-color: #0b0f13; 
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+/* Barra de menu de ponta a ponta */
+.barramenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #1a232a;
+    border-bottom: 2px solid #2e3c48;
+    margin-bottom: 40px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.barramenu::before {
+    content: "";
+    width: 75px;
+}
+
+.links {
+    display: flex;
+    gap: 30px; 
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.links a {
+    color: #cbd5e1;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.links a.ativo {
+    background-color: transparent;
+    color: #ffffff;
+    padding: 4px 0;
+    border-radius: 0;
+    font-weight: bold;
+    position: relative;
+}
+
+.links a.ativo::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #4ade80; 
+}
+
+.links a:hover {
+    color: #ffffff;
+}
+
+/* Seletor de Idioma */
+.seletor-idioma {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 6px 10px;
+    width: 75px;
+    justify-content: flex-end;
+    transition: opacity 0.2s ease;
+}
+
+.seletor-idioma:hover {
+    opacity: 0.85;
+}
+
+.icone-globo {
+    width: 18px;
+    height: 18px;
+    fill: #4ade80;
+}
+
+.lang-opcao {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #475569; 
+    transition: color 0.2s ease;
+}
+
+.separador-lang {
+    color: #475569;
+    font-size: 0.85rem;
+}
+
+.lang-opcao.ativo {
+    color: #4ade80;
+}
+
+/* Títulos da Página */
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #4ade80;
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.ds-subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+/* Container do Design System */
+.ds-container {
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.ds-secao {
+    background-color: #1a232a;
+    border: 1px solid #2e3c48;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.ds-secao h2 {
+    color: #4ade80;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #2e3c48;
+    padding-bottom: 15px;
+    text-align: left;
+}
+
+/* Cores Grid com Borda */
+.ds-cores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.cor-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.cor-amostra {
+    width: 100%;
+    height: 80px;
+    border-radius: 8px;
+    border: 2px solid #334155;
+    box-sizing: border-box;
+}
+
+.cor-nome {
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+}
+
+.cor-codigo {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-family: monospace;
+}
+
+/* Tipografia Exemplos - Apenas uma linha divisória entre itens */
+.ds-tipografia-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* o espaçamento agora vem só do padding/margin dos itens */
+}
+
+.tipo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Itens vazios não ocupam espaço nem geram borda */
+.tipo-item:empty {
+    display: none;
+}
+
+/* Mantém a linha entre H1 e H2 */
+.tipo-item + .tipo-item {
+    border-top: 1px solid #2e3c48;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* Remove somente a linha extra antes do body */
+.tipo-item + .tipo-item + .tipo-item {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.tipo-label {
+    font-size: 0.85rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.tipo-especs {
+    font-size: 0.75rem;
+    color: #4ade80;
+    background-color: #0f172a;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #334155;
+    font-family: monospace;
+    align-self: flex-start;
+}
+
+.tipo-exemplo-h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+}
+
+.tipo-exemplo-h2 {
+    font-size: 1.5rem;
+    color: #4ade80;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+    border: none;
+}
+
+.tipo-exemplo-p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin: 5px 0 0 0;
+    line-height: 1.5;
+    font-weight: 400;
+    border: none;
+}
+
+/* Botões Amostra */
+.ds-botoes-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.botao-amostra {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ds-btn-primary {
+    background-color: #4ade80;
+    color: #03060b;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.ds-btn-secondary {
+    background-color: transparent;
+    color: #cbd5e1;
+    border: 2px solid #4ade80;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
