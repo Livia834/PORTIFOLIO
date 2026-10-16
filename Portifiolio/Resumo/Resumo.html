@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="Resumo.css">
+</head>
+
+<body>
+    <!-- Barra de Menu padrão com o seletor de idioma -->
+    <header class="barramenu">
+        <nav class="links">
+             <a href="../index.html" data-pt="HOME" data-en="HOME">HOME</a>
+             <a href="Resumo.html" class="ativo" data-pt="RESUMO" data-en="RESUME">RESUMO</a>
+             <a href="../Contato/Contato.html" data-pt="CONTATOS" data-en="CONTACT">CONTATOS</a>
+             <a href="../Projetos/Projetos.html" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a>
+             <a href="../Design/Design.html" data-pt="DESIGN SYSTEM" data-en="DESIGN SYSTEM">DESIGN SYSTEM</a>
+        </nav>
+        
+        <!-- SELETOR DE IDIOMA -->
+        <div class="seletor-idioma" onclick="alternarIdioma()">
+            <svg class="icone-globo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.93 6h-3.15a15.7 15.7 0 0 0-1.57-4.11A8.04 8.04 0 0 1 19.93 8zM12 4.05c1.34 1.63 2.27 3.7 2.65 5.95H9.35c.38-2.25 1.31-4.32 2.65-5.95zM4.07 10h3.15c.16 1.44.54 2.84 1.09 4.11H4.37A8.04 8.04 0 0 1 4.07 10zm0 4h3.92c.55 1.27 1.25 2.48 2.09 3.59A15.7 15.7 0 0 1 4.07 14zm3.92-8h3.92C11.36 4.73 10.66 3.52 9.82 2.41A15.7 15.7 0 0 0 7.99 6zM12 19.95c-1.34-1.63-2.27-3.7-2.65-5.95h5.3c-.38 2.25-1.31 4.32-2.65 5.95zM14.9 14.11c.55-1.27.93-2.67 1.09-4.11h3.15a8.04 8.04 0 0 1-4.24 4.11zm0 2.29a15.7 15.7 0 0 1-2.09 3.59 15.7 15.7 0 0 1-2.09-3.59h4.18z"/>
+            </svg>
+            <span id="lang-pt" class="lang-opcao ativo">PT</span>
+            <span class="separador-lang">|</span>
+            <span id="lang-en" class="lang-opcao">EN</span>
+        </div>
+    </header>
+
+    <!-- Barra de Ações do PDF (Botões de Baixar / Abrir dinâmicos) -->
+    <div class="pdf-acoes-bar">
+        <span class="pdf-titulo" data-pt="Meu Currículo" data-en="My Resume">Meu Currículo</span>
+        <div class="pdf-botoes">
+           <a id="btn-baixar" href="curriculo_livia_duarte_silva.pdf" download="curriculo_livia_duarte_silva.pdf" class="btn-acao baixar" data-pt="Baixar PDF" data-en="Download PDF">
+                Baixar PDF
+            </a>
+            <a id="btn-abrir" href="curriculo_livia_duarte_silva.pdf" target="_blank" rel="noopener noreferrer" class="btn-acao abrir" data-pt="Abrir em nova aba" data-en="Open in new tab">
+                Abrir em nova aba
+            </a>
+        </div>
+    </div>
+
+    <!-- Visualizador do PDF na Tela Inteira (com ID para o JS alternar) -->
+    <div class="pdf-viewer-container">
+        <iframe id="pdf-curriculo" src="curriculo_livia_duarte_silva.pdf" class="pdf-iframe"></iframe>
+    </div>
+
+    <!-- Script Global de Tradução -->
+    <script src="../idioma.js"></script>
+</body>
+</html>

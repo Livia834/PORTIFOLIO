@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- 1. HEADER (Menu de navegação) -->
+    <header class="barramenu">
+        <nav class="links">
+             <a href="index.html" class="ativo" data-pt="HOME" data-en="HOME">HOME</a>
+             <a href="Resumo/Resumo.html" data-pt="RESUMO" data-en="RESUME">RESUMO</a>
+             <a href="Contato/Contato.html" data-pt="CONTATOS" data-en="CONTACT">CONTATOS</a>
+             <a href="Projetos/Projetos.html" data-pt="PROJETOS" data-en="PROJECTS">PROJETOS</a>
+             <a href="Design/Design.html" data-pt="DESIGN SYSTEM" data-en="DESIGN SYSTEM">DESIGN SYSTEM</a>
+        </nav>
+        
+        <!-- SELETOR DE IDIOMA -->
+        <div class="seletor-idioma" onclick="alternarIdioma()">
+            <svg class="icone-globo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm7.93 6h-3.15a15.7 15.7 0 0 0-1.57-4.11A8.04 8.04 0 0 1 19.93 8zM12 4.05c1.34 1.63 2.27 3.7 2.65 5.95H9.35c.38-2.25 1.31-4.32 2.65-5.95zM4.07 10h3.15c.16 1.44.54 2.84 1.09 4.11H4.37A8.04 8.04 0 0 1 4.07 10zm0 4h3.92c.55 1.27 1.25 2.48 2.09 3.59A15.7 15.7 0 0 1 4.07 14zm3.92-8h3.92C11.36 4.73 10.66 3.52 9.82 2.41A15.7 15.7 0 0 0 7.99 6zM12 19.95c-1.34-1.63-2.27-3.7-2.65-5.95h5.3c-.38 2.25-1.31 4.32-2.65 5.95zM14.9 14.11c.55-1.27.93-2.67 1.09-4.11h3.15a8.04 8.04 0 0 1-4.24 4.11zm0 2.29a15.7 15.7 0 0 1-2.09 3.59 15.7 15.7 0 0 1-2.09-3.59h4.18z"/>
+            </svg>
+            <span id="lang-pt" class="lang-opcao ativo">PT</span>
+            <span class="separador-lang">|</span>
+            <span id="lang-en" class="lang-opcao">EN</span>
+        </div>
+    </header>
+
+    <div class="home-container">
+        
+        <!-- COLUNA DA ESQUERDA: Foto de perfil -->
+        <div class="foto-container">
+            <img src="foto.jpg" alt="Foto de perfil" class="foto-perfil">
+        </div>
+
+        <!-- COLUNA DA DIREITA: Nome em cima e Seção Sobre Mim embaixo -->
+        <div class="info-container">
+            <h1>Livia Duarte Silva</h1>
+
+            <!-- SUBTÍTULO COM PROFISSÃO E LOCALIZAÇÃO -->
+            <div class="subtitulo-perfil">
+                <span class="cargo" data-pt="ESTUDANTE DE CIÊNCIA DA COMPUTAÇÃO" data-en="COMPUTER SCIENCE STUDENT">ESTUDANTE DE CIÊNCIA DA COMPUTAÇÃO</span> 
+                <span class="separador">/</span> 
+                <span class="localizacao" data-pt="RESIDINDO EM BELO HORIZONTE, BRASIL" data-en="BASED IN BELO HORIZONTE, BRAZIL">RESIDINDO EM BELO HORIZONTE, BRASIL</span>
+            </div>
+            
+            <section class="secao-sobre">
+                <h2 data-pt="Sobre mim:" data-en="About me:">Sobre mim:</h2>
+                <p data-pt="Olá! Meu nome é Lívia Duarte Silva, tenho 18 anos e sou estudante de Ciência da Computação na PUC Minas, atualmente no 2º período. Sou uma pessoa curiosa, dedicada e que gosta de aprender, explorar novas ideias e entender como as coisas funcionam. Tenho interesse pela área de tecnologia e desenvolvimento de software, buscando constantemente ampliar meus conhecimentos e aprimorar minhas habilidades. Tenho especial interesse em desenvolvimento de software, inteligência artificial e análise de dados. Gosto de enfrentar desafios, descobrir novas possibilidades e entender como a tecnologia pode ser utilizada para desenvolver soluções e transformar ideias em realidade."
+                   data-en="Hello! My name is Lívia Duarte Silva, I am 18 years old and I am a Computer Science student at PUC Minas, currently in my 2nd semester. I am a curious, dedicated person who loves to learn, explore new ideas, and understand how things work. I am interested in technology and software development, constantly seeking to expand my knowledge and improve my skills. I have a special interest in software development, artificial intelligence, and data analysis. I enjoy facing challenges, discovering new possibilities, and understanding how technology can be used to build solutions and turn ideas into reality.">
+                    Olá! Meu nome é Lívia Duarte Silva, tenho 18 anos e sou estudante de Ciência da Computação na PUC Minas, atualmente no 2º período.<br>
+                    Sou uma pessoa curiosa, dedicada e que gosta de aprender, explorar novas ideias e entender como as coisas funcionam.<br>
+                    Tenho interesse pela área de tecnologia e desenvolvimento de software, buscando constantemente ampliar meus conhecimentos e aprimorar minhas habilidades.
+                    Tenho especial interesse em desenvolvimento de software, inteligência artificial e análise de dados.<br>
+                    Gosto de enfrentar desafios, descobrir novas possibilidades e entender como a tecnologia pode ser utilizada para desenvolver soluções e transformar ideias em realidade. 
+                </p>
+            </section>
+
+            <!-- BOTÃO PARA VER O RESUMO / CURRÍCULO -->
+            <div class="curriculo-container">
+                <a href="../Resumo/Resumo.html" class="btn-curriculo" data-pt="Ver Resumo (PDF)" data-en="View Resume (PDF)">
+                    Ver Resumo (PDF)
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script Global de Tradução -->
+    <script src="../idioma.js"></script>
+</body>
+</html>
